@@ -1,5 +1,5 @@
 # pose-conditioned-NeRF-object-fusion
-Official GitHub repository for the paper "Language-driven Object Fusion into Neural Radiance Fields with Pose-Conditioned Dataset Updates".
+Official GitHub repository for the paper "[Language-driven Object Fusion into Neural Radiance Fields with Pose-Conditioned Dataset Updates](https://arxiv.org/abs/2309.11281)".
 
 - **2023.09.21** - We are still working on the method and more visual results. The revised paper, complete dataset, and code implementation are expected to be released earliest in mid-November.
 - **2023.09.21** - We attach all images used in a complete object insertion example [here](https://drive.google.com/file/d/1GOz9M60DMaRjn0HShnLdg03Rhk-yasiJ/view?usp=sharing) for reference. Just in case someone is interested in the problem, method, or result setting. Below are a few images of them:
