@@ -27,17 +27,17 @@ All photos were taken with an iPhone and feature everyday backgrounds or objects
 
 Below is the visualization of some objects and backgrounds:
 <p align="center">
-  <img width="128" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/6569c6a5-24cb-4596-9cba-fd74823bcac4">
-  <img width="128" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/cc8a975b-9fdc-4559-a8f8-5cae987b844c">&nbsp&nbsp
-  <img width="128" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/dac59422-47ed-40f8-8db6-674eb38ec4f6">
-  <img width="128" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/a71b48d5-941b-407a-b00a-19c1062ac142">&nbsp&nbsp
-  <img width="128" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/813a9532-7df6-41d5-ae22-97940d26251a">
-  <img width="128" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/b73f13c0-67f7-41b0-a498-98eff816016a">&nbsp&nbsp
+  <img width="112" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/6569c6a5-24cb-4596-9cba-fd74823bcac4">
+  <img width="112" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/cc8a975b-9fdc-4559-a8f8-5cae987b844c">&nbsp&nbsp
+  <img width="112" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/dac59422-47ed-40f8-8db6-674eb38ec4f6">
+  <img width="112" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/a71b48d5-941b-407a-b00a-19c1062ac142">&nbsp&nbsp
+  <img width="112" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/813a9532-7df6-41d5-ae22-97940d26251a">
+  <img width="112" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/b73f13c0-67f7-41b0-a498-98eff816016a">&nbsp&nbsp
 <br>
-  <img width="128" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/78dbf441-5d44-4b87-aef2-eab232ab8910">
-  <img width="128" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/131e70d6-93be-4b4e-ac5d-5e49f72c9efd">&nbsp&nbsp
-  <img width="128" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/81053344-3c98-487c-a6e6-bf7515bf6dae">
-  <img width="128" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/240af5e0-4bfa-480a-8438-b0a54a77edf0">&nbsp&nbsp
+  <img width="112" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/78dbf441-5d44-4b87-aef2-eab232ab8910">
+  <img width="112" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/131e70d6-93be-4b4e-ac5d-5e49f72c9efd">&nbsp&nbsp
+  <img width="112" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/81053344-3c98-487c-a6e6-bf7515bf6dae">
+  <img width="112" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/240af5e0-4bfa-480a-8438-b0a54a77edf0">&nbsp&nbsp
   &nbsp&nbsp and more objects ...
 </p>
 
@@ -45,17 +45,17 @@ Below is the visualization of some objects and backgrounds:
 
 
 <p align="center">
-  <img width="128" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/04522694-3224-4350-8efd-98be0bcb8dec">
-  <img width="128" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/7bb3dbfc-dab8-4b82-beb7-b81c16f36bff">&nbsp&nbsp
-  <img width="128" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/1a26815d-48e3-4bc9-a425-843a5a163951">
-  <img width="128" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/aaaccf30-bb40-4b44-a639-cd614b92aa30">&nbsp&nbsp
-  <img width="128" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/b4d69ee6-e638-492e-b173-c162fee1426b">
-  <img width="128" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/6938191c-c964-48d1-893a-f0b7cd29b846">&nbsp&nbsp
+  <img width="112" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/04522694-3224-4350-8efd-98be0bcb8dec">
+  <img width="112" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/7bb3dbfc-dab8-4b82-beb7-b81c16f36bff">&nbsp&nbsp
+  <img width="112" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/1a26815d-48e3-4bc9-a425-843a5a163951">
+  <img width="112" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/aaaccf30-bb40-4b44-a639-cd614b92aa30">&nbsp&nbsp
+  <img width="112" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/b4d69ee6-e638-492e-b173-c162fee1426b">
+  <img width="112" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/6938191c-c964-48d1-893a-f0b7cd29b846">&nbsp&nbsp
 <br>
-  <img width="128" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/a5b31f8a-0736-4502-940a-d92daf6a27d4">
-  <img width="128" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/1d10b6fa-d547-4804-8197-8b5ac13c1335">&nbsp&nbsp
-  <img width="128" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/5ecdfede-7387-4140-8e6d-4ed231d25e6f">
-  <img width="128" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/06e6c3cc-b2d2-45eb-aef0-b6b7644c10f4">&nbsp
+  <img width="112" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/a5b31f8a-0736-4502-940a-d92daf6a27d4">
+  <img width="112" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/1d10b6fa-d547-4804-8197-8b5ac13c1335">&nbsp&nbsp
+  <img width="112" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/5ecdfede-7387-4140-8e6d-4ed231d25e6f">
+  <img width="112" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/06e6c3cc-b2d2-45eb-aef0-b6b7644c10f4">&nbsp
   &nbsp&nbsp and more backgrounds ...
 </p>
 
@@ -65,7 +65,7 @@ Note: We crossly perform the more generalizable `5 background sets x 7 object se
 > Todo: data coming soon!
 
 ### 3. Customize your Data (Optional)
-> Todo: data coming soon!
+> Todo: code coming soon!
 
 
 
