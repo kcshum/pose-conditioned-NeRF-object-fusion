@@ -1,21 +1,56 @@
-# pose-conditioned-NeRF-object-fusion
-Official GitHub repository for the paper "[Language-driven Object Fusion into Neural Radiance Fields with Pose-Conditioned Dataset Updates](https://arxiv.org/abs/2309.11281)".
+# Language-driven Object Fusion into Neural Radiance Fields with Pose-Conditioned Dataset Updates (CVPR 2024)
+Official Github repository for paper:
+<p align="center">
+  <a href="https://arxiv.org/abs/2309.11281"><i><b>Language-driven Object Fusion into Neural Radiance Fields with Pose-Conditioned Dataset Updates</b></i></a>
+<br>
+  <a href="https://scholar.google.com/citations?user=LAUhTjAAAAAJ"><i>Ka Chun Shum<sup>1</sup></i></a>, 
+  <a href="https://ja-yeon-kim.github.io/"><i>Jaeyeon Kim<sup>1</sup></i></a>, 
+  <a href="https://sonhua.github.io/"><i>Binh-Son Hua<sup>2</sup></i></a>, 
+  <a href="https://ducthanhnguyen.weebly.com/"><i>Duc Thanh Nguyen<sup>3</sup></i></a>, 
+  <a href="https://saikit.org/index.html"><i>Sai-Kit Yeung<sup>1</sup></i></a>
+<br>
+  <i><sup>1</sup>Hong Kong University of Science and Technology</i>&nbsp&nbsp <i><sup>2</sup>Trinity College Dublin</i>&nbsp&nbsp <i><sup>3</sup>Deakin University</i>
+<br>
+<br>
+  <img width="900" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/52277184-576a-440a-a969-09597ead7b38">
+<br>
+</p>
+  We aim to insert an object into the background. 
+  We first customize and fine-tune a text-to-image diffusion model for view synthesis in an inpainting manner, then apply the model to progressively fuse an object into background views to update a background NeRF.
 
-- **2023.09.21** - We are still working on the method and more visual results. The revised paper, complete dataset, and code implementation are expected to be released earliest in mid-November.
-- **2023.09.21** - We attach all images used in a complete object insertion example [here](https://drive.google.com/file/d/1GOz9M60DMaRjn0HShnLdg03Rhk-yasiJ/view?usp=sharing) for reference. Just in case someone is interested in the problem, method, or result setting. Below are a few images of them:
-- **2024.03.03** - The paper is accepted to CVPR 2024! We will release our code and camera-ready version of the paper as soon as possible.
 
-&nbsp; &nbsp; &nbsp;
-<img src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/a0954be4-05e8-4e7c-9017-ff80e7738e45" width="128" height="128">
-<img src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/ff5b7ff6-7d70-45ac-ac33-33b903107732" width="128" height="128">
-&nbsp; <--- input: object
 
-&nbsp; &nbsp; &nbsp;
-<img src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/d09426e2-ac01-4d65-a236-a943e076a5d6" width="128" height="128">
-<img src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/ed82aa8c-0e1c-4bf2-b2c6-dccf19727586" width="128" height="128">
-&nbsp; <--- input: background
+# Dataset
+### 1. Data Management
+The data 
 
-&nbsp; &nbsp; &nbsp;
-<img src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/a4c3c584-79ce-4770-8e8d-d8a2638b461f" width="128" height="128">
-<img src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/ce00d36a-e764-481b-805c-3a897ff7251c" width="128" height="128">
-&nbsp; <--- output: inserted
+### 2. Data Download
+> Todo: data coming soon!
+
+
+
+# Training
+### 1. Training Objective
+The data look like
+
+### 2. Diffusion Model Fine-tuning for Object-blended View Synthesis
+> Todo: code coming soon!
+
+### 3. NeRF Optimization with pose-conditioned dataset updates
+> Todo: code coming soon!
+
+
+
+# Inferencing
+### 1. Render an image
+> Todo: code coming soon!
+
+### 2. Render a video
+> Todo: code coming soon!
+
+
+
+# Acknowledgement
+This code is built upon [HashNeRF-pytorch](https://github.com/yashbhalgat/HashNeRF-pytorch) implementation of [instant-ngp](https://nvlabs.github.io/instant-ngp/), and [Paddle](https://github.com/PaddlePaddle/Paddle) implementation of [DreamBooth](https://dreambooth.github.io/). 
+<br>
+We thank them for their nice implementation!
