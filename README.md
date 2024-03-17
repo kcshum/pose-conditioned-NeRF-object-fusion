@@ -15,8 +15,8 @@ Official Github repository for paper:
   <img width="900" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/52277184-576a-440a-a969-09597ead7b38">
 <br>
 </p>
-  We aim to insert an object into the background. 
-  We first customize and fine-tune a text-to-image diffusion model for view synthesis in an inpainting manner, then apply the model to progressively fuse an object into background views to update a background NeRF.
+We aim to insert an object into a NeRF background. 
+We first customize and fine-tune a text-to-image diffusion model for view synthesis in an inpainting manner, then apply the model to progressively fuse an object into background views to update a background NeRF.
 
 
 
@@ -31,7 +31,20 @@ The data
 
 # Training
 ### 1. Training Objective
-The data look like
+We aim to insert an object *(represented by a set of multi-view object images)* into a background NeRF *(learned from a set of multi-view background images)*.
+
+Below are the video visualization results of some edited NeRFs, where the red boxes refer to the target location:
+
+<p align="center">
+  <img width="256" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/bfd0d8f2-8533-4e7c-90e6-f992f738ee7e">&nbsp
+  <img width="256" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/bfd0d8f2-8533-4e7c-90e6-f992f738ee7e">&nbsp
+  <img width="256" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/bfd0d8f2-8533-4e7c-90e6-f992f738ee7e">&nbsp
+<br>
+  <img width="256" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/bfd0d8f2-8533-4e7c-90e6-f992f738ee7e">&nbsp
+  <img width="256" src="https://github.com/kcshum/pose-conditioned-NeRF-object-fusion/assets/41816098/bfd0d8f2-8533-4e7c-90e6-f992f738ee7e">&nbsp
+  &nbsp&nbsp and more ...
+</p>
+
 
 ### 2. Diffusion Model Fine-tuning for Object-blended View Synthesis
 > Todo: code coming soon!
