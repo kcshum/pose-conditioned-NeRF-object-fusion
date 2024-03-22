@@ -1,0 +1,372 @@
+#############################
+# wooden table - sneaker
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="sneaker" --background_data="wooden_table" \
+--object_prompt="sks blue sneaker" --background_prompt="pqp wooden table" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/wooden_table" \
+--finetuned_model_path "dream_outputs/sneaker_and_wooden_table" \
+--prompt "sks blue sneaker on pqp wooden table" \
+--pivot_name "IMG_4864.png" --box_name wooden_table_01 \
+--strength_lower_bound 35 --strength_higher_bound 35
+
+#############################
+# wooden table - model car
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="model_car" --background_data="wooden_table" \
+--object_prompt="sks white model car" --background_prompt="pqp wooden table" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/wooden_table" \
+--finetuned_model_path "dream_outputs/model_car_and_wooden_table" \
+--prompt "sks white model car on pqp wooden table" \
+--pivot_name "IMG_4853.png" --box_name wooden_table_02 \
+--strength_lower_bound 35 --strength_higher_bound 35
+
+#############################
+# wooden table - dumbbell
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="dumbbell" --background_data="wooden_table" \
+--object_prompt="sks dumbbell" --background_prompt="pqp wooden table" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/wooden_table" \
+--finetuned_model_path "dream_outputs/dumbbell_and_wooden_table" \
+--prompt "sks dumbbell on pqp wooden table" \
+--pivot_name "IMG_4853.png" --box_name wooden_table_02 \
+--strength_lower_bound 35 --strength_higher_bound 35
+
+#############################
+# wooden table - shipping bag
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="shipping_bag" --background_data="wooden_table" \
+--object_prompt="sks light green shipping bag" --background_prompt="pqp wooden table" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/wooden_table" \
+--finetuned_model_path "dream_outputs/shipping_bag_and_wooden_table" \
+--prompt "sks light green shipping bag on pqp wooden table" \
+--pivot_name "IMG_4853.png" --box_name wooden_table_03 \
+--strength_lower_bound 35 --strength_higher_bound 35
+
+
+#############################
+# black table - sneaker
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="sneaker" --background_data="black_table" \
+--object_prompt="sks blue sneaker" --background_prompt="pqp black table" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/black_table" \
+--finetuned_model_path "dream_outputs/sneaker_and_black_table" \
+--prompt "sks blue sneaker on pqp black table" \
+--pivot_name "IMG_8067.png" --box_name black_table_01 \
+--strength_lower_bound 35 --strength_higher_bound 35
+
+#############################
+# black table - model car
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="model_car" --background_data="black_table" \
+--object_prompt="sks white model car" --background_prompt="pqp black table" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/black_table" \
+--finetuned_model_path "dream_outputs/model_car_and_black_table" \
+--prompt "sks white model car on pqp black table" \
+--pivot_name "IMG_8067.png" --box_name black_table_01 \
+--strength_lower_bound 35 --strength_higher_bound 35
+
+#############################
+# black table - cap
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="cap" --background_data="black_table" \
+--object_prompt="sks blue cap" --background_prompt="pqp black table" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/black_table" \
+--finetuned_model_path "dream_outputs/cap_and_black_table" \
+--prompt "sks blue cap on pqp black table" \
+--pivot_name "IMG_8067.png" --box_name black_table_01 \
+--strength_lower_bound 35 --strength_higher_bound 35
+
+#############################
+# black table - shipping bag
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="shipping_bag" --background_data="black_table" \
+--object_prompt="sks light green shipping bag" --background_prompt="pqp black table" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/black_table" \
+--finetuned_model_path "dream_outputs/shipping_bag_and_black_table" \
+--prompt "sks light green shipping bag on pqp black table" \
+--pivot_name "IMG_8067.png" --box_name black_table_02 \
+--strength_lower_bound 35 --strength_higher_bound 35
+
+
+#############################
+# sofa - gray bag
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="bag" --background_data="sofa" \
+--object_prompt="sks gray bag" --background_prompt="pqp sofa" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/sofa" \
+--finetuned_model_path "dream_outputs/bag_and_sofa" \
+--prompt "sks gray bag on pqp sofa" \
+--pivot_name "IMG_0692.png" --box_name sofa_01 \
+--strength_lower_bound 35 --strength_higher_bound 35
+
+#############################
+# sofa - cap
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="cap" --background_data="sofa" \
+--object_prompt="sks blue cap" --background_prompt="pqp sofa" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/sofa" \
+--finetuned_model_path "dream_outputs/cap_and_sofa" \
+--prompt "sks blue cap on pqp sofa" \
+--pivot_name "IMG_0692.png" --box_name sofa_01 \
+--strength_lower_bound 35 --strength_higher_bound 35
+
+#############################
+# sofa - sneaker
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="sneaker" --background_data="sofa" \
+--object_prompt="sks blue sneaker" --background_prompt="pqp sofa" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/sofa" \
+--finetuned_model_path "dream_outputs/sneaker_and_sofa" \
+--prompt "sks blue sneaker on pqp sofa" \
+--pivot_name "IMG_0692.png" --box_name sofa_01 \
+--strength_lower_bound 35 --strength_higher_bound 35
+
+#############################
+# sofa - toy motorcycle
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="toy_motorcycle" --background_data="sofa" \
+--object_prompt="sks toy motorcycle" --background_prompt="pqp sofa" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/sofa" \
+--finetuned_model_path "dream_outputs/toy_motorcycle_and_sofa" \
+--prompt "sks toy motorcycle on pqp sofa" \
+--pivot_name "IMG_0692.png" --box_name sofa_01 \
+--strength_lower_bound 35 --strength_higher_bound 35
+
+
+#############################
+# bed - sneaker
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="sneaker" --background_data="bed" \
+--object_prompt="sks blue sneaker" --background_prompt="pqp bed" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/bed" \
+--finetuned_model_path "dream_outputs/sneaker_and_bed" \
+--prompt "sks blue sneaker on pqp bed" \
+--pivot_name "IMG_0348.png" --box_name bed_01 \
+--strength_lower_bound 35 --strength_higher_bound 35
+
+#############################
+# bed - model car
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="model_car" --background_data="bed" \
+--object_prompt="sks white model car" --background_prompt="pqp bed" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/bed" \
+--finetuned_model_path "dream_outputs/model_car_and_bed" \
+--prompt "sks white model car on pqp bed" \
+--pivot_name "IMG_0348.png" --box_name bed_01 \
+--strength_lower_bound 35 --strength_higher_bound 35
+
+#############################
+# bed - dumbbell
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="dumbbell" --background_data="bed" \
+--object_prompt="sks dumbbell" --background_prompt="pqp bed" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/bed" \
+--finetuned_model_path "dream_outputs/dumbbell_and_bed" \
+--prompt "sks dumbbell on pqp bed" \
+--pivot_name "IMG_0348.png" --box_name bed_01 \
+--strength_lower_bound 35 --strength_higher_bound 35
+
+#############################
+# bed - toy motorcycle
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="toy_motorcycle" --background_data="bed" \
+--object_prompt="sks toy motorcycle" --background_prompt="pqp bed" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/bed" \
+--finetuned_model_path "dream_outputs/toy_motorcycle_and_bed" \
+--prompt "sks toy motorcycle on pqp bed" \
+--pivot_name "IMG_0416.png" --box_name bed_02 \
+--strength_lower_bound 35 --strength_higher_bound 35
+
+
+#############################
+# floor - dumbbell
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="dumbbell" --background_data="floor" \
+--object_prompt="sks dumbbell" --background_prompt="pqp floor" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/floor" \
+--finetuned_model_path "dream_outputs/dumbbell_and_floor" \
+--prompt "sks dumbbell on pqp floor" \
+--pivot_name "IMG_0684.png" --box_name floor_01 \
+--strength_lower_bound 50 --strength_higher_bound 50
+
+#############################
+# floor - gray bag
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="bag" --background_data="floor" \
+--object_prompt="sks gray bag" --background_prompt="pqp floor" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/floor" \
+--finetuned_model_path "dream_outputs/bag_and_floor" \
+--prompt "sks gray bag on pqp floor" \
+--pivot_name "IMG_0684.png" --box_name floor_01 \
+--strength_lower_bound 50 --strength_higher_bound 50
+
+#############################
+# floor - sneaker
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="sneaker" --background_data="floor" \
+--object_prompt="sks blue sneaker" --background_prompt="pqp floor" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/floor" \
+--finetuned_model_path "dream_outputs/sneaker_and_floor" \
+--prompt "sks blue sneaker on pqp floor" \
+--pivot_name "IMG_0684.png" --box_name floor_01 \
+--strength_lower_bound 50 --strength_higher_bound 50
+
+#############################
+# floor - shipping bag
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="shipping_bag" --background_data="floor" \
+--object_prompt="sks light green shipping bag" --background_prompt="pqp floor" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/floor" \
+--finetuned_model_path "dream_outputs/shipping_bag_and_floor" \
+--prompt "sks light green shipping bag on pqp floor" \
+--pivot_name "IMG_0684.png" --box_name floor_01 \
+--strength_lower_bound 50 --strength_higher_bound 50
+
+
+#############################
+# road - car
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="car" --background_data="road" \
+--object_prompt="sks car" --background_prompt="pqp road" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/road" \
+--finetuned_model_path "dream_outputs/car_and_road" \
+--prompt "sks car on pqp road" \
+--pivot_name "IMG_6617.png" --box_name road_01 \
+--strength_lower_bound 35 --strength_higher_bound 35
+
+#############################
+# wooden floor - table set
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="table_set" --background_data="wooden_floor" \
+--object_prompt="sks table set" --background_prompt="pqp wooden floor" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/wooden_floor" \
+--finetuned_model_path "dream_outputs/table_set_and_wooden_floor" \
+--prompt "sks table set in pqp wooden floor" \
+--pivot_name "IMG_6422.png" --box_name wooden_floor_01 \
+--strength_lower_bound 35 --strength_higher_bound 35
+
+#############################
+# backpack - wall
+#############################
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="backpack" --background_data="wall" \
+--object_prompt="sks backpack" --background_prompt="pqp wall" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/wall" \
+--finetuned_model_path "dream_outputs/backpack_and_wall" \
+--prompt "sks backpack on pqp wall" \
+--pivot_name "IMG_6526.png" --box_name wall_01 \
+--strength_lower_bound 35 --strength_higher_bound 35

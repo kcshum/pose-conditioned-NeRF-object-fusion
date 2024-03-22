@@ -1,0 +1,34 @@
+expname = Fusion
+datadir = ./data/nerf_synthetic/dense_table_reGen
+finetuned_model_path = /mnt/hdd/jason/multiview_360_editing/HashNeRF-pytorch/dream_outputs/blue_cap_60_inpaint
+
+no_batching = True
+use_viewdirs = True
+precrop_iters = 500
+precrop_frac = 0.5
+finest_res = 1024
+
+N_samples = 64
+N_importance = 128
+N_rand = 4096
+
+lrate = 0.01
+lrate_decay = 10
+lrate_fusion = 0.001
+
+
+pivot_name = default.png
+prompt = a default text prompt
+
+strength_lower_bound = 35
+strength_higher_bound = 35
+
+initial_iter = 20000
+extra_train_on_pivot_iter = 500
+operation_iter = 10
+new_far_image_iters = 500
+num_Neighbors = 2
+
+i_trainset = 5000
+i_visualization = 100
+i_weights = 5000

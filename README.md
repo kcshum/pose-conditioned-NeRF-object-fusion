@@ -59,14 +59,48 @@ Below is the visualization of some objects and backgrounds:
   &nbsp&nbsp and more backgrounds ...
 </p>
 
-Note: We crossly perform the more generalizable `5 background sets x 7 object sets = 35 insertion edits` for quantitative experiments.
-
 ### 2. Data Download
-> Todo: data coming soon!
+Our dataset can be downloaded [here](https://drive.google.com/file/d/1_Agyxvt8iAxKj8brDmqHYNAR7BHtD4ZL/view?usp=sharing). 
+Unzip it and place the dataset folder as `pose-conditioned-NeRF-object-fusion/dataset`.
 
 ### 3. Customize your Data (Optional)
-> Todo: code coming soon!
+You may follow [instant-ngp](https://github.com/NVlabs/instant-ngp/blob/master/docs/nerf_dataset_tips.md) to construct your data.
 
+
+# Environment
+Clone the code and build a virtual environment for it:
+```
+git clone https://github.com/kcshum/pose-conditioned-NeRF-object-fusion.git
+cd pose-conditioned-NeRF-object-fusion
+
+conda create -n posefusion python=3.9
+conda activate posefusion
+```
+
+We use [Paddle](https://github.com/PaddlePaddle/Paddle) implementation for diffusion model fine-tuning:
+```
+conda install -c conda-forge cudatoolkit=11.6 cudnn=8.4.1.50 -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/Paddle/
+pip install paddlepaddle-gpu==2.4.2.post116 -f https://www.paddlepaddle.org.cn/whl/linux/mkl/avx/stable.html
+pip install paddlenlp==2.5.2 ppdiffusers==0.14.0
+```
+
+>You are recommended to test whether Paddle is successfully installed by running in Python:
+>```
+>import paddle
+>paddle.utils.run_check()
+>```
+>If cudnn cannot be detected, run the followings and try again:
+>```
+>conda env config vars set LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/{change_to_your_dir}/anaconda3/envs/posefusion/include:/{change_to_your_dir}/anaconda3/envs/posefusion/lib
+>conda deactivate
+>conda activate posefusion
+>```
+
+We use Pytorch for NeRF optimization:
+```
+pip install torch==1.13.1+cu116 torchvision==0.14.1+cu116 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu116
+pip install opencv-python kornia configargparse
+```
 
 
 # Training
@@ -85,23 +119,75 @@ Below are the video visualization results of some edited NeRFs, where the red bo
   &nbsp&nbsp and more edits ...
 </p>
 
-Note: We provide in `/config` the configuration of various edits for you to try and modify.
+We provide in `configs/commands.txt` the configuration of various edits for you to try and modify. One example is described below.
 
 ### 2. Diffusion Model Fine-tuning for Object-blended View Synthesis
-> Todo: code coming soon!
+Fine-tune a diffusion model in inpainting manner on both the object and background images with customized text prompt:
+```
+python -u train_inpainting_dreambooth.py \
+--pretrained_model_name_or_path="stabilityai/stable-diffusion-2-inpainting" \
+--object_data="model_car" --background_data="wooden_table" \
+--object_prompt="sks white model car" --background_prompt="pqp wooden table" \
+--max_train_steps_OBJ=4000 --max_train_steps_BG=400
+```
+The command is self-explanatory. You may check the available arguments in the code.
+
+The fine-tuned diffusion model is by default saved in `dream_outputs/{--object_data}_and_{--background_data}`.
 
 ### 3. NeRF Optimization with pose-conditioned dataset updates
-> Todo: code coming soon!
+Optimize a background NeRF and then insert the object:
+```
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/wooden_table" \
+--finetuned_model_path "dream_outputs/model_car_and_wooden_table" \
+--prompt "sks white model car on pqp wooden table" \
+--pivot_name "IMG_4853.png" --box_name wooden_table_02 \
+--strength_lower_bound 35 --strength_higher_bound 35
+```
+The command is self-explanatory. You may check the available arguments in the code.
 
+`--pivot_name` is the first view to train. `--box_name` is the bounding box to use.
+`--strength_lower_bound` and `--strength_higher_bound` refer to the range of diffusion model noise strength used in inferencing for view refinement, 
+here we keep it fixed as 35 (note: 0 = no noise; 100 = pure noise). You may try random noise by specifying `--strength_lower_bound 10 --strength_higher_bound 90`.
+
+It is a prerequisite to provide a nice first object-blended view before updating the new nearby views. 
+The updating dataset is visualized in `logs/{your_experiment}/visualization`.
+
+The object bounding box is visualized in `logs/{your_experiment}/boundingbox`.
+
+The NeRF renderings are periodically visualized in `logs/{your_experiment}/{epoch}_{training stage}`.
+
+The NeRF model is periodically saved as `logs/{your_experiment}/{epoch}.tar`.
 
 
 # Inferencing
-### 1. Render an image
-> Todo: code coming soon!
+After the training ends, you may reuse the previous command and specifying extra arguments as follows.
 
-### 2. Render a video
-> Todo: code coming soon!
+You may render all training views by running:
+```
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/wooden_table" \
+--finetuned_model_path "dream_outputs/model_car_and_wooden_table" \
+--prompt "sks white model car on pqp wooden table" \
+--pivot_name "IMG_4853.png" --box_name wooden_table_02 \
+--strength_lower_bound 35 --strength_higher_bound 35 \
+--render_image --ckpt_epoch_to_load 40000
+```
 
+You may render a video by running:
+```
+python train_nerf_fusion.py \
+--config configs/nerf_fusion.txt --datadir "dataset/background/wooden_table" \
+--finetuned_model_path "dream_outputs/model_car_and_wooden_table" \
+--prompt "sks white model car on pqp wooden table" \
+--pivot_name "IMG_4853.png" --box_name wooden_table_02 \
+--strength_lower_bound 35 --strength_higher_bound 35 \
+--render_video --ckpt_epoch_to_load 40000 --video_expname video_01 \
+--video_frames 4842 4835 4854 4847 4871 4895 --num_Gaps 10
+```
+
+`--video_frames` defines a camera trajectory that goes through the specified views smoothly.
+`--num_Gaps` is the number of interpolated novel views between each view.
 
 
 # Acknowledgement
